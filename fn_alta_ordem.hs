@@ -9,7 +9,7 @@ lista2 = [1, 2, 3]
 fold_direita = foldr (\x y -> x - y) 0 lista2
 -- [1, 2, 3, 0] -> [1, 2, 3 (3-0)] -> [1, -1 (2-3)] -> 2 (1+1)
 
-foldl_esquerda = foldl (\x y -> x - y) 0 lista2
+fold_esquerda = foldl (\x y -> x - y) 0 lista2
 -- [0, 1, 2, 3] -> [-1 (0-1), 2, 3] -> [-3 (-1-2), 3] -> -6 (-3-3)
 
 main :: IO()
@@ -19,4 +19,4 @@ main = do
     putStrLn ("filter -> " ++ show filtro)
     putStrLn ("lista2 -> " ++ show lista2)
     putStrLn ("foldr -> " ++ show fold_direita)
-    putStrLn ("foldl -> " ++ show foldl_esquerda)
+    putStrLn ("foldl -> " ++ show fold_esquerda)
