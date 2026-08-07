@@ -1,6 +1,6 @@
 {--
-  Primeiro eh criado uma lista temporária de (Bool, Int) que será manipulada pelo foldr, onde se o Bool eh False a tupla esta 
-apenas armazenando um elemento solto da lista, caso seja True, significa que a tupla já esta armazenando a média de dois elementos.
+  Primeiro eh criado uma lista temporaria de (Bool, Int) que será manipulada pelo foldr, onde se o Bool eh False a tupla esta 
+apenas armazenando um elemento solto da lista, caso seja True, significa que a tupla ja esta armazenando a media de dois elementos.
   Depois eh feito um map pra deixar somente as medias calculadas, removendo os Bool e transformando em [Int] 
   Considera que a lista possui um numero par de elemtentos 
 --}
