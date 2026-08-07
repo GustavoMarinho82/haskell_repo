@@ -10,5 +10,5 @@ eh_quatro lista = map (\x -> x == 4) lista
 
 main :: IO()
 main = do
-    print (foldr (\x y -> x || y) False (eh_quatro l))
---  print (foldl (\x y -> x || y) False (eh_quatro l))   -- Descomente por sua conta e risco
+    print (foldr (\x acc -> x || acc) False (eh_quatro l))
+--  print (foldl (\acc x -> acc || x) False (eh_quatro l))   -- Descomente por sua conta e risco
