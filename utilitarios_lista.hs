@@ -1,5 +1,5 @@
 {- Eh possivel fazer todas essas funcoes com 
-:, ++, head, tail, map, filter e fold -}
+++, head, tail e fold -}
 
 lista = [10, 11, 12, 13, 14, 15]
 
