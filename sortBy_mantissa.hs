@@ -11,7 +11,7 @@ main = do
     print ("Lista original: " ++ show lista)
     print ("Ordenada pela mantissa: " ++ show (sortBy (compare `on` obterMantissa) lista))
     
-{-- Output:
+{- Output:
 "Lista original: [7,1024,3,10,42,1,100]"
 "Ordenada pela mantissa: [1024,1,10,42,3,100,7]"
---}
+-}
