@@ -5,19 +5,11 @@ apenas armazenando um elemento solto da lista, caso seja True, significa que a t
   Considera que a lista possui um numero par de elemtentos 
 --}
 
-fn_aux :: Int -> [(Bool, Int)] -> [(Bool, Int)]
-{--
-fn_aux x acc = if (null acc || fst (head acc) == True) 
-    then (False, x) : acc
-    else (True, (x + snd (head acc)) `div` 2) : tail acc
---}
-
-fn_aux x [] = [(False, x)]                                          -- Caso base
-fn_aux x ((True, med) : resto) = (False, x) : (True, med) : resto   -- Caso a media entre os dois anteriores ja esteja calculada
-fn_aux x ((False, num) : resto) = (True, (x + num) `div` 2) : resto -- Caso o primeiro da lista seja um numero solto
-
 med_bim:: [Int] -> [Int]
-med_bim l = map (\(_, med) -> med) (foldr fn_aux [] l)
+med_bim l = map (\(_, med) -> med) (foldr fn_aux [] l) where
+    fn_aux x [] = [(False, x)]                                          -- Caso base
+    fn_aux x acc@((True, med) : resto) = (False, x) : acc               -- Caso a media entre os dois anteriores ja esteja calculada
+    fn_aux x ((False, num) : resto) = (True, (x + num) `div` 2) : resto -- Caso o primeiro da lista seja um numero solto
 
 main :: IO ()
 main = print (med_bim [20, 20, 30, 20, 10, 0])
