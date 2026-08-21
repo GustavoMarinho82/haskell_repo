@@ -101,7 +101,7 @@ obter_multiplicador criatura tipo elemento = foldr fn 1.0 (efeitos criatura) whe
 
 -- Remove as criaturas mortas. Eh para ser chamada apos cada ataque realizado
 remover_mortos :: [Criatura] -> [Criatura]
-remover_mortos = foldr fn [] where
+remover_mortos criaturas = foldr fn [] criaturas where
     fn :: Criatura -> [Criatura] -> [Criatura]
     fn criatura acc = if (criatura.vida > 0) 
         then criatura : acc 
