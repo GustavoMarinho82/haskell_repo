@@ -31,7 +31,7 @@ data Defesas = Defesas {
 } deriving (Eq, Show)
 
 data Horario = Manha | Tarde | Noite deriving (Eq, Show)
-data Area = Litoral | Subterraneo | Masmorra | ConjuntosAgrarios | IlhasDoCeus deriving (Eq, Show)
+data Area = Litoral | Subterraneo | Masmorra | ConjuntosAgrarios | IlhasDoCeu deriving (Eq, Show)
 
 data Criatura = Criatura {
     nome :: String,
